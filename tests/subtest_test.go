@@ -12,11 +12,11 @@ func Test_Sum_TestSuite(t *testing.T) {
 		}
 	})
 
-	t.Run("Wrong use case", func(t *testing.T) {
+	/*t.Run("Wrong use case", func(t *testing.T) {
 		if got := Sum(2, 10); got != 15 {
 			t.Errorf("expected to get %d: got %d", 15, got)
 		}
-	})
+	})*/
 
 	//tear down code
 }

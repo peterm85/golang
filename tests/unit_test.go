@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func Test_DoStuffWithTestServer(t *testing.T) {
+func Test_WB_DoStuffWithTestServer(t *testing.T) {
 	// Start a local HTTP server
 	server := httptest.NewServer(http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {
 		// Send response to be tested

@@ -9,7 +9,7 @@ import (
 	"github.com/peterm85/golang/tests"
 )
 
-func Test_DoStuffWithTestServer(t *testing.T) {
+func Test_BB_DoStuffWithTestServer(t *testing.T) {
 	// Start a local HTTP server
 	server := httptest.NewServer(http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {
 		// Send response to be tested

@@ -22,7 +22,7 @@ func Test_Sum(t *testing.T) {
 		{descr: "Positive and negative inputs", inputX: 5, inputY: -3, exp: 2},
 		{descr: "Negative results", inputX: 5, inputY: -12, exp: -7},
 		{descr: "All negative inputs", inputX: -5, inputY: -12, exp: -17},
-		{descr: "Wrong use case", inputX: 2, inputY: 10, exp: 15},
+		//{descr: "Wrong use case", inputX: 2, inputY: 10, exp: 15},
 	}
 
 	//Test-runner code
