@@ -28,7 +28,7 @@ func JobWithCtx(ctx context.Context, jobID int) error {
 	return nil
 }
 
-func CancellableCtx() (*errgroup.Group, context.Context) {
+func cancellableCtx() (*errgroup.Group, context.Context) {
 	ctx, cancel := context.WithCancel(context.Background())
 	eg, ctx := errgroup.WithContext(ctx)
 	go func() {
@@ -64,7 +64,7 @@ func runJobs(eg *errgroup.Group, ctx context.Context) {
 	case "1":
 		eg, ctx = errgroup.WithContext(context.Background())
 	case "2":
-		eg, ctx = CancellableCtx()
+		eg, ctx = cancellableCtx()
 	}
 
 	runJobs(eg, ctx)

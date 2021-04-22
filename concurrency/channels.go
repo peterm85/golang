@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"time"
 )
 
@@ -11,7 +12,7 @@ which means the message must flow from the sender to the receiver immediately.
 If there’s no receiver, a message is stuck with the sender.
 
 */
-func DeadLockDataChannel() {
+func deadLockDataChannel() {
 	dataChannel := make(chan string)
 	dataChannel <- "Some Sample Data"
 	fmt.Println(<-dataChannel)
@@ -22,7 +23,7 @@ By adding a buffer to the channel, we give it a capacity to save some messages i
 allowing the sender to proceed with its work even if the data is not extracted on the other end
 and removing the deadlock.
 */
-func BufferedDataChannel() {
+func bufferedDataChannel() {
 	dataChannel := make(chan string, 3)
 	dataChannel <- "Some Sample Data"
 	dataChannel <- "Some Other Sample Data"
@@ -35,7 +36,7 @@ func BufferedDataChannel() {
 /*
 Listen messages from a subscriber chan
 */
-func subscribe(name string, subscriber chan string) {
+func subscribe(name string, subscriber <-chan string) {
 	for {
 		select {
 		case message := <-subscriber:
@@ -62,7 +63,7 @@ func publish(subscriptions map[chan string][]chan string) {
 	}
 }
 
-func PubSubChannel() {
+func pubSubChannel() {
 
 	sub1 := make(chan string)
 	sub2 := make(chan string)
@@ -94,15 +95,15 @@ func PubSubChannel() {
 	time.Sleep(2 * time.Second) //Some race conditions was found
 }
 
-/*func main() {
+func main() {
 	arg := os.Args[1]
 
 	switch arg {
 	case "1":
-		DeadLockDataChannel()
+		deadLockDataChannel()
 	case "2":
-		BufferedDataChannel()
+		bufferedDataChannel()
 	case "3":
-		PubSubChannel()
+		pubSubChannel()
 	}
-}*/
+}
