@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"time"
 )
 
@@ -95,7 +94,7 @@ func pubSubChannel() {
 	time.Sleep(2 * time.Second) //Some race conditions was found
 }
 
-func main() {
+/*func main() {
 	arg := os.Args[1]
 
 	switch arg {
@@ -106,4 +105,4 @@ func main() {
 	case "3":
 		pubSubChannel()
 	}
-}
+}*/
