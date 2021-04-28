@@ -2,6 +2,7 @@ package errhandling
 
 import (
 	"fmt"
+	"log"
 	"net"
 )
 
@@ -13,7 +14,8 @@ func Listen(host string, port uint16) (net.Listener, error) {
 
 	listener, listenError := net.ListenTCP("tcp", addr)
 	if listenError != nil {
-		return nil, fmt.Errorf("Listen: %s", listenError)
+		log.Fatal(listenError)
+		//return nil, fmt.Errorf("Listen: %s", listenError)
 	}
 
 	return listener, nil
