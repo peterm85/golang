@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package bidirecstr;
+
+option go_package = "grpc/bidirecstr";
+
+service ChatStreamService {
+  rpc Chat (stream Request) returns (stream Response) {}
+}
+
+message Request {
+  string nickname = 1;
+  string msg = 2;
+}
+
+message Response {
+  string nickname = 1;
+  string msg = 2;
+}
