@@ -15,4 +15,4 @@ test-subrun:
 	go test -v -run=Sum/All
 
 test-bench:
-	go test -run=Negative -bench=.
+	go test -benchmem -run=^$ -bench .
