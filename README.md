@@ -886,9 +886,9 @@ GRPC is agnostic. We can generate Go, C++ or Java grpc files.
 
 ### Unary 
 It is a simple RPC where the client sends a request to the server using the stub and waits for a response to come back, just like a normal function call.
-
-<img src="doc/unary.png" alt="Unary grpc" align="center" style="margin: 15px;"/>
-
+<p align="center">
+	<img src="doc/unary.png" alt="Unary grpc" style="margin: 15px;"/>
+</p>
 > /grpc/unary/unary.proto
 ```
 syntax = "proto3";
@@ -963,9 +963,9 @@ func runClient() {
 
 ### Server streaming
 A server-side streaming RPC where the client sends a request to the server and gets a stream to read a sequence of messages back. The client reads from the returned stream until there are no more messages. As you can see in our example, you specify a server-side streaming method by placing the stream keyword before the response type.
-
-<img src="doc/serverstr.png" alt="Server streaming grpc" align="center" style="margin: 15px;"/>
-
+<p align="center">
+	<img src="doc/serverstr.png" alt="Server streaming grpc" align="center" style="margin: 15px;"/>
+</p>
 > /grpc/serverstr/serverstr.proto
 ```
 service StreamService {
@@ -1042,9 +1042,9 @@ func runClient() {
 
 ### Client streaming
 A client-side streaming RPC where the client writes a sequence of messages and sends them to the server, again using a provided stream. Once the client has finished writing the messages, it waits for the server to read them all and return its response. You specify a client-side streaming method by placing the stream keyword before the request type.
-
-<img src="doc/clientstr.png" alt="Client streaming grpc" align="center" style="margin: 15px;"/>
-
+<p align="center">
+	<img src="doc/clientstr.png" alt="Client streaming grpc" align="center" style="margin: 15px;"/>
+</p>
 > /grpc/clientstr/clientstr.proto
 ```
 service ClientStreamService {
@@ -1110,9 +1110,9 @@ func runClient() {
 
 ### Bi-directional streaming
 A bidirectional streaming RPC where both sides send a sequence of messages using a read-write stream. The two streams operate independently, so clients and servers can read and write in whatever order they like: for example, the server could wait to receive all the client messages before writing its responses, or it could alternately read a message then write a message, or some other combination of reads and writes. The order of messages in each stream is preserved. You specify this type of method by placing the stream keyword before both the request and the response.
-
-<img src="doc/bidirectstr.png" alt="Bi-directional stream grpc" align="center" style="margin: 15px;"/>
-
+<p align="center">
+	<img src="doc/bidirectstr.png" alt="Bi-directional stream grpc" align="center" style="margin: 15px;"/>
+</p>
 > /grpc/bidirecstr/bidirecstr.proto
 ```
 service ChatStreamService {
