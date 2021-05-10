@@ -1,7 +1,7 @@
 # How to use Golang
 
 ## Purpose
-<img src="doc/gopher.png" alt="Gopher" style="float: right;"/>
+<img src="doc/gopher.png" alt="Gopher" align="right"/>
 
 When at first I decided to learn Golang I looked for books and courses that help me into a fast learning approach. However I didn't want to learn only to write Golang code. I really wanted to develop apps, tools or whatever and I needed a bigger scope. I wanted to learn software engineering with this new (for me) programming language.
 
@@ -18,7 +18,7 @@ This repository collect and resume (from my point of view) some important concep
 - [Grpc API](#grpc)
 
 ## <a name="overview">Overview</a> [&#8593;](#index) 
-<img src="doc/ovw.png" alt="Gopher" style="float: right; margin: 10px;"/>
+<img src="doc/ovw.png" alt="Gopher" align="right" style="margin: 10px;"/>
 
 Go, also commonly referred to as Golang, is a programming language developed at Google in 2007 by Robert Griesemer, Rob Pike, and Ken Thompson to improve programming productivity in an era of multicore, networked machines and large codebases.
 
