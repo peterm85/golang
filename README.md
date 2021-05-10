@@ -1,4 +1,4 @@
-# How to use Golang
+# Walking with Golang
 
 ## Purpose
 <img src="doc/gopher.png" alt="Gopher" align="right"/>
@@ -10,7 +10,7 @@ This repository collect and resume (from my point of view) some important concep
 ## Index
 - [Overview](#overview)
 - [Packaging best practices](#packaging)
-- [S.O.L.I.D](#solid)
+- [S.O.L.I.D principles](#solid)
 - [Testing](#testing)
 - [Concurrency](#concurrency)
 - [Error handling](#error)
@@ -18,7 +18,7 @@ This repository collect and resume (from my point of view) some important concep
 - [Grpc API](#grpc)
 
 ## <a name="overview">Overview</a> [&#8593;](#index) 
-<img src="doc/ovw.png" alt="Gopher" align="right" style="margin: 10px;"/>
+<img src="doc/ovw.png" alt="Gopher" align="right" style="margin: 15px;"/>
 
 Go, also commonly referred to as Golang, is a programming language developed at Google in 2007 by Robert Griesemer, Rob Pike, and Ken Thompson to improve programming productivity in an era of multicore, networked machines and large codebases.
 
@@ -37,7 +37,7 @@ https://github.com/a8m/golang-cheat-sheet
 However, in these pages we will not focus on how to write it, but on how to use it correctly.
 
 ## <a name="packaging">Packaging best practices</a> [&#8593;](#index) 
-<img src="doc/pkg.png" alt="Gopher packaging" style="float: right;"/>
+<img src="doc/pkg.png" alt="Gopher packaging" align="right"/>
 
 Some recommended packaging rules that we should follow:
 
@@ -50,8 +50,8 @@ Some recommended packaging rules that we should follow:
 
 They will be very useful to organizing our source code.
 
-## <a name="solid">S.O.L.I.D</a> [&#8593;](#index) 
-<img src="doc/solid.png" alt="Gopher the master" style="float: right;"/>
+## <a name="solid">S.O.L.I.D principles</a> [&#8593;](#index) 
+<img src="doc/solid.png" alt="Gopher the master" align="right" style="margin: 15px;"/>
 
 As with other programming languages, it is important to know how to write code efficiently and easily. Because of that, one of the first things I focused on was how to apply the basic principles of SOLID.
 
@@ -239,7 +239,7 @@ func main() {
 We will see few aspects about testing as scopes, aproaches, patterns and different types of tests.
 
 ### Scopes
-<img src="doc/test1.png" alt="Gopher testing" style="float: right;"/>
+<img src="doc/test1.png" alt="Gopher testing" align="right" style="margin: 15px;"/>
 
 Surely anyone who has been in the programming world for a while will know these concepts. However I think it is important to have a picture of what these tests are like in the Go world.
 
@@ -316,7 +316,7 @@ BenchmarkCalculateNegative1-8           1000000000               0.253 ns/op    
 ```
 
 ### Approaches
-<img src="doc/test2.png" alt="Gopher testing" style="float: right;"/>
+<img src="doc/test2.png" alt="Gopher testing" align="right" style="margin: 15px;"/>
 
 In a very similar way to cibersecurity pentesting, we can analyze the behavior of our applications under these two approaches:
 
@@ -351,7 +351,7 @@ func Test_WB_DoStuffWithTestServer(t *testing.T) {
 ```
 
 ### Patterns
-<img src="doc/test3.png" alt="Gopher testing" style="float: right;"/>
+<img src="doc/test3.png" alt="Gopher testing" align="right" style="margin: 15px;"/>
 
 Next, we will explain some useful patterns to help us test our code:
 
@@ -471,7 +471,7 @@ In this case, we can use a in-memory key-value database instead of a fully datab
 But remember: Don’t use it on production!!
 
 ### Types
-<img src="doc/test4.png" alt="Gopher testing" style="float: right;"/>
+<img src="doc/test4.png" alt="Gopher testing" align="right" style="margin: 15px;"/>
 
 Golang support just two ways of making tests. We will talk about them, their combinations and some helper tools.
 
@@ -583,7 +583,7 @@ We can use our own util tools to check `isOk()` or `isEquals()` (see on `/tests/
 https://github.com/go-check/check
 
 ### Bonus: some tips
-<img src="doc/tips.png" alt="Gopher tips" style="float: right;"/>
+<img src="doc/tips.png" alt="Gopher tips" align="right" style="margin: 15px;"/>
 
 #### Parallel tests
 We can run tests in parallel using `t.Parallel()`.
@@ -617,7 +617,7 @@ $go test -tags ut
 [Examples](https://github.com/peterm85/golang/tree/main/tests)
 
 ## <a name="concurrency">Concurrency</a> [&#8593;](#index) 
-<img src="doc/gorut.png" alt="Gopher concurrency" style="float: right;"/>
+<img src="doc/gorut.png" alt="Gopher concurrency" align="right" style="margin: 15px;"/>
 
 Concurrency in Golang is the ability for functions to run independent of each other. This means a program that have two or more tasks that run individually of each other, at about the same time, but remain part of the same program. Next, we will explain the main elements to make that happen.
 
@@ -748,7 +748,7 @@ Once a Goroutine request a Mutex lock on a shared resource using `sync.Mutex.Loc
 [Examples](https://github.com/peterm85/golang/tree/main/concurrency)
 
 ## <a name="error">Error handling</a> [&#8593;](#index) 
-<img src="doc/err.png" alt="Gopher error handling" style="float: right;"/>
+<img src="doc/err.png" alt="Gopher error handling" align="right" style="margin: 15px;"/>
 
 An error in Go is any type implementing the error interface with an Error() string method. Functions return errors just like any other value. Multiple return values distinguish errors from normal return values.
 
@@ -832,7 +832,7 @@ Failed payload can be persisted to an external system (message-queue) to be manu
 [Examples](https://github.com/peterm85/golang/tree/main/errhandling)
 
 ## <a name="modules">Modules</a> [&#8593;](#index) 
-<img src="doc/pkg.png" alt="Gopher packaging" style="float: right;"/>
+<img src="doc/pkg.png" alt="Gopher packaging" align="right" style="margin: 15px;"/>
 
 Go modules were introduced as an experimental feature in Go1.11 that it be enabled via ```GO111MODULE=on``` environment variable.
 Replaces the previous dependency tool goPkg.
@@ -870,20 +870,24 @@ github.com/golang/protobuf v1.2.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5y
 ```
 
 ## <a name="grpc">Grpc API</a> [&#8593;](#index) 
-<img src="doc/grpc.png" alt="Gopher grpc" style="float: right;"/>
+<img src="doc/grpc.png" alt="Gopher grpc" align="right" style="margin: 15px;"/>
 
-GRPC is an open source project developed by Google, which is part of the CNCF (Cloud Native Computation Foundation). It allows calling from a client application a method or service that is defined on a server (which may be located on another machine) as if it were a method that was defined locally.
+GRPC is an open source project developed by Google, which is part of the CNCF (Cloud Native Computation Foundation). It allows calling from a client application a method or service that is defined on a server (which may be located on another machine) as if it were a method that was defined locally. It uses HTTP/2 for transport, Protocol Buffers as the interface description language, and provides features such as authentication, bidirectional streaming and flow control, blocking or nonblocking bindings, and cancellation and timeouts.
 
 Actually, it is only necessary to define these methods and the messages to be exchanged and GRPC will take care of all the work for us.
 
 All we need is:
 - The [compiler](https://github.com/protocolbuffers/protobuf/releases)
 - The .proto file
+- Generate the grpc code
+- Implement the client and server-side behaviour
 
 GRPC is agnostic. We can generate Go, C++ or Java grpc files.
 
 ### Unary 
 It is a simple RPC where the client sends a request to the server using the stub and waits for a response to come back, just like a normal function call.
+
+<img src="doc/unary.png" alt="Unary grpc" align="center" style="margin: 15px;"/>
 
 > /grpc/unary/unary.proto
 ```
@@ -959,6 +963,8 @@ func runClient() {
 
 ### Server streaming
 A server-side streaming RPC where the client sends a request to the server and gets a stream to read a sequence of messages back. The client reads from the returned stream until there are no more messages. As you can see in our example, you specify a server-side streaming method by placing the stream keyword before the response type.
+
+<img src="doc/serverstr.png" alt="Server streaming grpc" align="center" style="margin: 15px;"/>
 
 > /grpc/serverstr/serverstr.proto
 ```
@@ -1037,6 +1043,8 @@ func runClient() {
 ### Client streaming
 A client-side streaming RPC where the client writes a sequence of messages and sends them to the server, again using a provided stream. Once the client has finished writing the messages, it waits for the server to read them all and return its response. You specify a client-side streaming method by placing the stream keyword before the request type.
 
+<img src="doc/clientstr.png" alt="Client streaming grpc" align="center" style="margin: 15px;"/>
+
 > /grpc/clientstr/clientstr.proto
 ```
 service ClientStreamService {
@@ -1102,6 +1110,8 @@ func runClient() {
 
 ### Bi-directional streaming
 A bidirectional streaming RPC where both sides send a sequence of messages using a read-write stream. The two streams operate independently, so clients and servers can read and write in whatever order they like: for example, the server could wait to receive all the client messages before writing its responses, or it could alternately read a message then write a message, or some other combination of reads and writes. The order of messages in each stream is preserved. You specify this type of method by placing the stream keyword before both the request and the response.
+
+<img src="doc/bidirectstr.png" alt="Bi-directional stream grpc" align="center" style="margin: 15px;"/>
 
 > /grpc/bidirecstr/bidirecstr.proto
 ```
