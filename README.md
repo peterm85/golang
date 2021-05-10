@@ -889,6 +889,7 @@ It is a simple RPC where the client sends a request to the server using the stub
 <p align="center">
 	<img src="doc/unary.png" alt="Unary grpc" style="margin: 15px;"/>
 </p>
+
 > /grpc/unary/unary.proto
 ```
 syntax = "proto3";
@@ -966,6 +967,7 @@ A server-side streaming RPC where the client sends a request to the server and g
 <p align="center">
 	<img src="doc/serverstr.png" alt="Server streaming grpc" align="center" style="margin: 15px;"/>
 </p>
+
 > /grpc/serverstr/serverstr.proto
 ```
 service StreamService {
@@ -1045,6 +1047,7 @@ A client-side streaming RPC where the client writes a sequence of messages and s
 <p align="center">
 	<img src="doc/clientstr.png" alt="Client streaming grpc" align="center" style="margin: 15px;"/>
 </p>
+
 > /grpc/clientstr/clientstr.proto
 ```
 service ClientStreamService {
@@ -1113,6 +1116,7 @@ A bidirectional streaming RPC where both sides send a sequence of messages using
 <p align="center">
 	<img src="doc/bidirectstr.png" alt="Bi-directional stream grpc" align="center" style="margin: 15px;"/>
 </p>
+
 > /grpc/bidirecstr/bidirecstr.proto
 ```
 service ChatStreamService {
